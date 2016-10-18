@@ -1,0 +1,18 @@
+link do repositorio 
+https://github.com/MarcelloMFreitas/TrabalhoPOO4.git
+abrir o git shell
+criar seu diretorio local na pasta do github
+entrar pelo git shell na sua pasta local
+git init - inicia seu repositorio
+gtt clone (link do repositorio)- copia o projeto para seu diretorio local
+abra o netbeans e abra o projeto na sua pasta local do github e edite
+git status - verifica pastas ou arquivos modificados
+git add * - adiciona tudo ou o nome do arquivo modificado
+git commit -m "nome do commit"  - identificar o commit
+git push - enviar arquivo modificado
+
+
+Comandos para Update
+
+git fetch
+git pull
