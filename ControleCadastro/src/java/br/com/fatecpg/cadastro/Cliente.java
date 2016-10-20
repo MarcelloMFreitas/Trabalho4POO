@@ -4,10 +4,11 @@ package br.com.fatecpg.cadastro;
 
     public class Cliente {
     private String nome;
-    private String endereco;
-    private String servico;
+    private String cpf;
+    private String rg;
     private String email;
     private String telefone;
+    private String endereco;
 
     public String getNome() {
         return nome;
@@ -17,20 +18,20 @@ package br.com.fatecpg.cadastro;
         this.nome = nome;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
-    public String getServico() {
-        return servico;
+    public String getRg() {
+        return rg;
     }
 
-    public void setServico(String servico) {
-        this.servico = servico;
+    public void setRg(String rg) {
+        this.rg = rg;
     }
 
     public String getEmail() {
@@ -48,6 +49,16 @@ package br.com.fatecpg.cadastro;
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+    
+
     
 
 }

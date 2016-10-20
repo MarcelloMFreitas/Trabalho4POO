@@ -4,9 +4,11 @@ package br.com.fatecpg.cadastro;
 
 public class Fornecedor {
     private String nome;
-    private String produto;
+    private String razao;
+    private String cnpj;
     private String email;
     private String telefone;
+    private String endereço;
 
     public String getNome() {
         return nome;
@@ -16,12 +18,20 @@ public class Fornecedor {
         this.nome = nome;
     }
 
-    public String getProduto() {
-        return produto;
+    public String getRazao() {
+        return razao;
     }
 
-    public void setProduto(String produto) {
-        this.produto = produto;
+    public void setRazao(String razao) {
+        this.razao = razao;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 
     public String getEmail() {
@@ -39,6 +49,15 @@ public class Fornecedor {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public String getEndereço() {
+        return endereço;
+    }
+
+    public void setEndereço(String endereço) {
+        this.endereço = endereço;
+    }
     
+
     
 }
