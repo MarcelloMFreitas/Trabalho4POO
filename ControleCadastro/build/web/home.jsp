@@ -1,7 +1,9 @@
+<%-- 
+    Document   : home
+    Created on : 17/10/2016, 21:52:13
+    Author     : marce
+--%>
 
-<%@page import="java.util.ArrayList"%>
-<%@page import="br.com.fatecpg.cadastro.Fornecedor"%>
-<%@page import="br.com.fatecpg.cadastro.DadosFornecedor"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
