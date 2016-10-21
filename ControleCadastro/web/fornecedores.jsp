@@ -39,17 +39,21 @@
         
         <table style="width:100%">
             <tr>
-                <th>ID</th>
                 <th>NOME</th>
+                <th>RAZÃO SOCIAL</th>
+                <th>CNPJ</th>
                 <th>EMAIL</th>
                 <th>TELEFONE</th>
+                <th>ENDEREÇO</th>
                 <th>AÇÃO</th>
             </tr>
             <tr>
-                <td>00</td>
                 <td>Nome de Sobrenome</td>
+                <td>Razão</td>
+                <td>051361164564/100</td>
                 <td>email@pessoa.com.br</td>
                 <td>01311112222</td>
+                <td>Avenida Tal</td>
                 <td><button>Alterar</button><button>Alterar</button></td>
             </tr>
         </table>
