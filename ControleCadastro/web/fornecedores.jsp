@@ -14,16 +14,22 @@
             <h2>Fornecedores</h2><br />
             
             <label>Nome: </label>
-            <input type="text" name="campoNome" size="60"/>
+            <input type="text" name="campoNome" size="30"/>
 
+            <label>Razão Social:  </label>
+            <input type="text" name="campoCPF" size="30"/>
+            
+            <label>CNPJ:  </label>
+            <input type="text" name="campoRG" size="30"/>
+            
             <label>E-mail: </label>
             <input type="email" name="campoEmail" size="15"/>
             
             <label>Telefone: </label>
             <input type="text" name="campoTelefone" size="12"/>
             
-            <label>Produto: </label>
-            <input type="text" name="campoProduto" size="60"/>
+            <label>Endereço: </label>
+            <input type="text" name="campoTelefone" size="30"/>
 
             <button>Incluir</button>
             <button>Gravar Alteração</button>
