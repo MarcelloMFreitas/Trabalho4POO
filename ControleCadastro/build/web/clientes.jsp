@@ -25,11 +25,14 @@
         lista.remove(i);
         response.sendRedirect(request.getRequestURI());
     }
+    if(request.getParameter("alterar")!=null){
+        
+     }
 %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Cadstro de Clientes</title>
+        <title>Cadastro de Clientes</title>
     </head>
     <body>
         <h1>Clientes</h1>
@@ -43,9 +46,9 @@
                 Email: <input type="text" name="email"/>
                 Telefone: <input type="text" name="telefone"/>
                 Endereço:<input type="text" name="endereco">
-                <br/>
+                
                 <input type="submit" name="incluir" value="Incluir"/>
-                <input type="submit" name="inc_alteracao" value="Gravar Alteração"/>
+                
                 
             </form>
         </fieldset>

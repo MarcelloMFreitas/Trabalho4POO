@@ -23,6 +23,10 @@
         lista.remove(i);
         response.sendRedirect(request.getRequestURI());
     }
+    if(request.getParameter("alterar")!=null){
+        
+     }
+    
 %>
 <html>
     <head>
@@ -41,9 +45,9 @@
                 Email: <input type="text" name="email"/>
                 Telefone: <input type="text" name="telefone"/>
                 Endereço:<input type="text" name="endereço">
-                <br/>
+               
                 <input type="submit" name="incluir" value="Incluir"/>
-                <input type="submit" name="inc_alteracao" value="Gravar Alteração"/>
+                
                 
             </form>
         </fieldset>
@@ -75,6 +79,9 @@
                         <input type="submit" name="excluir" value="Excluir"/>
                         <input type="submit" name="alterar" value="Alterar"/>
                     </form>
+                        <form>
+                            
+                        </form>
                 </td>
             </tr>
             <% } %>

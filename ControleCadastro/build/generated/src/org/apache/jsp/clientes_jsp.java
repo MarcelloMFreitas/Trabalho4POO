@@ -55,14 +55,14 @@ public final class clientes_jsp extends org.apache.jasper.runtime.HttpJspBase
 
     ArrayList<Cliente> lista = DadosCliente.getClientes();
     if (request.getParameter("incluir") != null) {
-        Cliente p = new Cliente();
-        p.setNome(request.getParameter("nome"));
-        p.setCpf(request.getParameter("cpf"));
-        p.setRg(request.getParameter("rg"));
-        p.setEmail(request.getParameter("email"));
-        p.setTelefone(request.getParameter("telefone"));
-        p.setEndereco(request.getParameter("endereco"));
-        lista.add(p);
+        Cliente c = new Cliente();
+        c.setNome(request.getParameter("nome"));
+        c.setCpf(request.getParameter("cpf"));
+        c.setRg(request.getParameter("rg"));
+        c.setEmail(request.getParameter("email"));
+        c.setTelefone(request.getParameter("telefone"));
+        c.setEndereco(request.getParameter("endereco"));
+        lista.add(c);
         response.sendRedirect(request.getRequestURI());
     }
     if(request.getParameter("excluir")!=null){
@@ -71,12 +71,15 @@ public final class clientes_jsp extends org.apache.jasper.runtime.HttpJspBase
         lista.remove(i);
         response.sendRedirect(request.getRequestURI());
     }
+    if(request.getParameter("alterar")!=null){
+        
+     }
 
       out.write("\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("        <title>JSP Page</title>\r\n");
+      out.write("        <title>Cadastro de Clientes</title>\r\n");
       out.write("    </head>\r\n");
       out.write("    <body>\r\n");
       out.write("        <h1>Clientes</h1>\r\n");
@@ -90,9 +93,9 @@ public final class clientes_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                Email: <input type=\"text\" name=\"email\"/>\r\n");
       out.write("                Telefone: <input type=\"text\" name=\"telefone\"/>\r\n");
       out.write("                Endereço:<input type=\"text\" name=\"endereco\">\r\n");
-      out.write("                <br/>\r\n");
+      out.write("                \r\n");
       out.write("                <input type=\"submit\" name=\"incluir\" value=\"Incluir\"/>\r\n");
-      out.write("                <input type=\"submit\" name=\"inc_alteracao\" value=\"Gravar Alteração\"/>\r\n");
+      out.write("                \r\n");
       out.write("                \r\n");
       out.write("            </form>\r\n");
       out.write("        </fieldset>\r\n");
@@ -110,34 +113,34 @@ public final class clientes_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <th>Ação</th>\r\n");
       out.write("            </tr>\r\n");
       out.write("            ");
- for(Cliente p: lista) { 
+ for(Cliente c: lista) { 
       out.write("\r\n");
       out.write("            <tr>\r\n");
       out.write("                <td>");
-      out.print( lista.indexOf(p) );
+      out.print( lista.indexOf(c) );
       out.write("</td>\r\n");
       out.write("                <td>");
-      out.print( p.getNome() );
+      out.print( c.getNome() );
       out.write("</td>\r\n");
       out.write("                <td>");
-      out.print( p.getCpf() );
+      out.print( c.getCpf() );
       out.write("</td>\r\n");
       out.write("                <td>");
-      out.print( p.getRg() );
+      out.print( c.getRg() );
       out.write("</td>\r\n");
       out.write("                <td>");
-      out.print( p.getEmail() );
+      out.print( c.getEmail() );
       out.write("</td>\r\n");
       out.write("                <td>");
-      out.print( p.getTelefone() );
+      out.print( c.getTelefone() );
       out.write("</td>\r\n");
       out.write("                <td>");
-      out.print( p.getEndereco() );
+      out.print( c.getEndereco() );
       out.write("</td>\r\n");
       out.write("                <td>\r\n");
       out.write("                    <form>\r\n");
       out.write("                        <input type=\"hidden\" name=\"1\" value=\"");
-      out.print( lista.indexOf(p));
+      out.print( lista.indexOf(c));
       out.write("\"/>\r\n");
       out.write("                        <input type=\"submit\" name=\"excluir\" value=\"Excluir\"/>\r\n");
       out.write("                        <input type=\"submit\" name=\"alterar\" value=\"Alterar\"/>\r\n");
