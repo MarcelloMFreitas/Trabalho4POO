@@ -1,4 +1,3 @@
-
 <%@page import="java.util.ArrayList"%>
 <%@page import="br.com.fatecpg.cadastro.Fornecedor"%>
 <%@page import="br.com.fatecpg.cadastro.DadosFornecedor"%>
@@ -13,18 +12,28 @@
         f.setCnpj(request.getParameter("cnpj"));
         f.setEmail(request.getParameter("email"));
         f.setTelefone(request.getParameter("telefone"));
-        f.setEndereço(request.getParameter("endereço"));
+        f.setEndereço(request.getParameter("endereco"));
         lista.add(f);
         response.sendRedirect(request.getRequestURI());
     }
     if(request.getParameter("excluir")!=null){
-        String par = request.getParameter("1");
-        int i = Integer.parseInt(par);
+        int i = Integer.parseInt(request.getParameter("parametro"));
         lista.remove(i);
         response.sendRedirect(request.getRequestURI());
     }
     if(request.getParameter("alterar")!=null){
+        Fornecedor f = new Fornecedor();
+        int i = Integer.parseInt(request.getParameter("parametro"));
+            
+        f.setNome(request.getParameter("nomeAlteravel"));
+        f.setRazao(request.getParameter("razaoAlteravel"));
+        f.setCnpj(request.getParameter("cnpjAlteravel"));
+        f.setEmail(request.getParameter("emailAlteravel"));
+        f.setTelefone(request.getParameter("telefoneAlteravel"));
+        f.setEndereço(request.getParameter("enderecoAlteravel"));
+        lista.set(i, f);
         
+        response.sendRedirect(request.getRequestURI());
      }
     
 %>
@@ -40,18 +49,17 @@
             <form>
                 Nome: <input type="text" name="nome"/>
                 Razão Social: <input type="text" name="razao"/>
-                CNPJ: <input type="text" name="cnpj"/>
+                CNPJ: <input type="number" name="cnpj"/>
                 <br/>
-                Email: <input type="text" name="email"/>
-                Telefone: <input type="text" name="telefone"/>
-                Endereço:<input type="text" name="endereço">
+                Email: <input type="email" name="email"/>
+                Telefone: <input type="number" name="telefone"/>
+                Endereço:<input type="text" name="endereco">
+                
                
                 <input type="submit" name="incluir" value="Incluir"/>
                 
-                
             </form>
-        </fieldset>
-        <h2>Lista de Fornecedores</h2>
+                <h2>Lista de Fornecedores</h2>                
         <table border="1">
             <tr>
                 <th>ID</th>
@@ -64,28 +72,31 @@
                 <th>Endereço</th>
                 <th>Ação</th>
             </tr>
-            <% for(Fornecedor f: lista) { %>
+            
+            <% for(Fornecedor f: lista) { %>           
             <tr>
-                <td><%= lista.indexOf(f) %></td>
-                <td><%= f.getNome() %></td>
-                <td><%= f.getRazao() %></td>
-                <td><%= f.getCnpj() %></td>
-                <td><%= f.getEmail() %></td>
-                <td><%= f.getTelefone() %></td>
-                <td><%= f.getEndereço() %></td>
+                <form>
+                <td><input type="text" name="id" value="<%= lista.indexOf(f) %>" size="2" disabled /></td>
+                <td><input type="text" name="nomeAlteravel" value="<%= f.getNome() %>" /></td>
+                <td><input type="text" name="razaoAlteravel" value="<%= f.getRazao() %>" /></td>
+                <td><input type="number" name="cnpjAlteravel" value="<%= f.getCnpj() %>" /></td>
+                <td><input type="email" name="emailAlteravel" value="<%= f.getEmail() %>" /></td>
+                <td><input type="number" name="telefoneAlteravel" value="<%= f.getTelefone() %>" /></td>
+                <td><input type="text" name="enderecoAlteravel" value="<%= f.getEndereço() %>" /></td>
                 <td>
-                    <form>
-                        <input type="hidden" name="1" value="<%= lista.indexOf(f)%>"/>
-                        <input type="submit" name="excluir" value="Excluir"/>
-                        <input type="submit" name="alterar" value="Alterar"/>
-                    </form>
-                        <form>
-                            
-                        </form>
+                    
+                    <input type="hidden" name="parametro" value="<%= lista.indexOf(f) %>"/>
+                    <input type="submit" name="excluir" value="Excluir"/>
+                    <input type="submit" name="alterar" value="Alterar"/>
+                    
                 </td>
+                </form>
             </tr>
+            
             <% } %>
+            
         </table>
-    </body>
-    
+            
+        </fieldset>
+    </body>    
 </html>
