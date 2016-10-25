@@ -41,26 +41,30 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cadastro de Fornecedores</title>
+        <link rel="stylesheet" type="text/css" href="fornecedores.css"/>
     </head>
     <body>
+        <p id="um"><a href="home.jsp">Antiquário Túnel do Tempo</a></p>
+        <div class="antique">
         <h1>Fornecedores</h1>
         <fieldset>
             <legend>Cadastro</legend>
-            <form>
+            <form id="dados">
                 Nome: <input type="text" name="nome"/>
                 Razão Social: <input type="text" name="razao"/>
                 CNPJ: <input type="number" name="cnpj"/>
                 <br/>
                 Email: <input type="email" name="email"/>
                 Telefone: <input type="number" name="telefone"/>
-                Endereço:<input type="text" name="endereco">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                Endereço: <input type="text" name="endereco">
                 
                
                 <input type="submit" name="incluir" value="Incluir"/>
                 
             </form>
                 <h2>Lista de Fornecedores</h2>                
-        <table border="1">
+        <table id="table" border="1">
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
@@ -98,5 +102,6 @@
         </table>
             
         </fieldset>
+        </div>
     </body>    
 </html>

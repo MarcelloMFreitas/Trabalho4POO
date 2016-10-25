@@ -15,7 +15,7 @@ body {
     text-align: center;
     width: 600px;
     border: 1px black solid;
-    padding: 15px;
+    padding: 30px;
     /* padding-left: 100px;
     padding-right: 100px;
     padding-top: 50px;
@@ -27,39 +27,59 @@ body {
 }
 
 h1 {
-    font-family: Dattermatter Personal Use, Helvetica, sans-serif;
-    font-size: 55px;
+    font-family: Coventry Garden NF, Dattermatter Personal Use, Helvetica, sans-serif;
+    font-size: 50px;
     margin-bottom: 0;
     margin-top: 15px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.4);
 }
 
 h2 {
+    font-family: Antique Book Cover Regular, Helvetica, sans-serif;
     margin-top: 0;
     text-align: center;
     float: right;
 }
 
 p {
+    font-size: 15px;
+    font-family: Antique Book Cover Regular, Helvetica, sans-serif;
     margin-top: 7%;
     text-align: justify;
     margin-left: 50px;
+    margin-bottom: 15px;
 }
 
 .botao {
-    font-size: 35px;
+    font-size: 30px;
     background-color: #CDB79E;
-}
-
+    border: 1px solid black;
+    border-radius: 8%;
+ }
+    
 .botao a {
+    font-family: Coventry Garden NF, Helvetica, sans-serif;
     text-decoration: none;
     color: black;
     margin-left: 5px;
+    
 }
 
 .botao:hover {
-    background-color: #8B7D6B;
+    background-color: #EED5B7;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
 
 table {
     margin: 0 auto;
+ }
+
+
+/*
+footer {
+  width: 600px;
+  font-size: 12px;
+  text-align: center;
+  margin: 150px auto;
 }
+*/

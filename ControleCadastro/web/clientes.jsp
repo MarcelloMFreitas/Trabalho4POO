@@ -41,16 +41,20 @@
 %>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cadastro de Clientes</title>
-    </head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="clientes.css"
+     </head>
     <body>
+        <p id="um"><a href="home.jsp">Antiquário Túnel do Tempo</a></p>
+        <div class="antique">
         <h1>Clientes</h1>
         <fieldset>
             <legend>Cadastro</legend>
-            <form>
+            <form id="dados">
                 Nome: <input type="text" name="nome"/>
                 CPF: <input type="number" name="cpf"/>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                 RG: <input type="number" name="rg"/>
                 <br/>
                 Email: <input type="email" name="email"/>
@@ -94,5 +98,6 @@
             </tr>
             <% } %>
         </table>
-    </body>
+        </div>
+     </body>
 </html>

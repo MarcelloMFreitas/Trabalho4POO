@@ -1,0 +1,106 @@
+/* 
+    Created on : 25/10/2016, 14:13:26
+    Author     : Rafael
+*/
+body {
+    text-align: center;
+    background: #FFE4B5 url(noise.png);
+    margin: 10px auto;
+}
+#um {
+    width: 1080px;
+    text-decoration: none;
+    margin: 0 auto;
+    font-family: Coventry Garden NF, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+
+#um a {
+    text-decoration: none;
+    color: black;
+}
+
+#um a:hover {
+    text-decoration: none;
+    color: black;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+}
+
+
+.antique {
+    width: 1080px;
+    text-align: center;
+    border: 1px black solid;
+    padding: 30px;
+    /* padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px; */
+    border-radius: 3% 3%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+    background-color: #FAF0E6;
+}
+
+h1 {
+    font-family: Coventry Garden NF, Dattermatter Personal Use, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-bottom: 0;
+    margin-top: 15px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
+
+h2 {
+    font-family: Antique Book Cover Regular, Helvetica, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+table {
+    margin: 0 auto;
+}
+fieldset {
+    background-color: #FFFAF0;
+}
+p {
+    font-size: 15px;
+    font-family: Antique Book Cover Regular, Helvetica, sans-serif;
+    margin-top: 7%;
+    text-align: justify;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-family: Antique Book Cover Regular;
+    font-size: 17.5px;
+    font-weight: bold;
+}
+
+#table {
+    border-collapse: collapse;
+    border-color: gray;
+    background-color: beige;
+}
+
+th {
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-color: gray;
+    color: #696969;
+}
+
+td {
+    border-color: gray;
+}
+
+#dados {
+    text-align: justify;
+    margin-left: 150px;
+}
+

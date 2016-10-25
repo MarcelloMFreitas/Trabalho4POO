@@ -1,0 +1,1 @@
+É só procurá-las na pasta "Fontes" e instalar o arquivo .ttf (ou .otf) :D
