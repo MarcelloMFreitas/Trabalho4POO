@@ -20,13 +20,23 @@
         response.sendRedirect(request.getRequestURI());
     }
     if(request.getParameter("excluir")!=null){
-        String par = request.getParameter("1");
-        int i = Integer.parseInt(par);
+        int i = Integer.parseInt(request.getParameter("parametro"));
         lista.remove(i);
         response.sendRedirect(request.getRequestURI());
     }
     if(request.getParameter("alterar")!=null){
+        Cliente c = new Cliente();
+        int i = Integer.parseInt(request.getParameter("parametro"));
+            
+        c.setNome(request.getParameter("nomeAlteravel"));
+        c.setCpf(request.getParameter("cpfAlteravel"));
+        c.setRg(request.getParameter("rgAlteravel"));
+        c.setEmail(request.getParameter("emailAlteravel"));
+        c.setTelefone(request.getParameter("telefoneAlteravel"));
+        c.setEndereco(request.getParameter("enderecoAlteravel"));
+        lista.set(i, c);
         
+        response.sendRedirect(request.getRequestURI());
      }
 %>
 <html>
@@ -40,11 +50,11 @@
             <legend>Cadastro</legend>
             <form>
                 Nome: <input type="text" name="nome"/>
-                CPF: <input type="text" name="cpf"/>
-                RG: <input type="text" name="rg"/>
+                CPF: <input type="number" name="cpf"/>
+                RG: <input type="number" name="rg"/>
                 <br/>
-                Email: <input type="text" name="email"/>
-                Telefone: <input type="text" name="telefone"/>
+                Email: <input type="email" name="email"/>
+                Telefone: <input type="number" name="telefone"/>
                 Endereço:<input type="text" name="endereco">
                 
                 <input type="submit" name="incluir" value="Incluir"/>
@@ -67,20 +77,20 @@
             </tr>
             <% for(Cliente c: lista) { %>
             <tr>
-                <td><%= lista.indexOf(c) %></td>
-                <td><%= c.getNome() %></td>
-                <td><%= c.getCpf() %></td>
-                <td><%= c.getRg() %></td>
-                <td><%= c.getEmail() %></td>
-                <td><%= c.getTelefone() %></td>
-                <td><%= c.getEndereco() %></td>
+                <form>
+                <td><input type="text" name="id" value="<%= lista.indexOf(c) %>" size="2" disabled/></td>
+                <td><input type="text" name="nomeAlteravel" value="<%= c.getNome() %>"/></td>
+                <td><input type="number" name="cpfAlteravel" value="<%= c.getCpf() %>" /></td>
+                <td><input type="number" name="rgAlteravel" value="<%= c.getRg() %>" /></td>
+                <td><input type="email" name="emailAlteravel" value="<%= c.getEmail() %>" /></td>
+                <td><input type="number" name="telefoneAlteravel" value="<%= c.getTelefone() %>" /></td>
+                <td><input type="text" name="enderecoAlteravel" value="<%= c.getEndereco() %>" /></td>
                 <td>
-                    <form>
-                        <input type="hidden" name="1" value="<%= lista.indexOf(c)%>"/>
+                        <input type="hidden" name="parametro" value="<%= lista.indexOf(c)%>"/>
                         <input type="submit" name="excluir" value="Excluir"/>
                         <input type="submit" name="alterar" value="Alterar"/>
-                    </form>
                 </td>
+                </form>
             </tr>
             <% } %>
         </table>
